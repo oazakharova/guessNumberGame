@@ -1,14 +1,18 @@
-const randomNumber = Math.floor(Math.random() * 100) + 1;
+"use strict";
 
-const guesses = document.querySelector(".guesses");
-const lastResult = document.querySelector(".lastResult");
-const lowOrHi = document.querySelector(".lowOrHi");
+let randomNumber = Math.floor(Math.random() * 100) + 1;
 
-const guessSubmit = document.querySelector(".guessSubmit");
-const guessField = document.querySelector(".guessField");
+let guesses = document.querySelector(".guesses");
+let lastResult = document.querySelector(".lastResult");
+let lowOrHi = document.querySelector(".lowOrHi");
 
-const guessCount = 1;
+let guessSubmit = document.querySelector(".guessSubmit");
+let guessField = document.querySelector(".guessField");
+
+let guessCount = 1;
 let resetButton;
+
+guessField.focus();
 
 function checkGuess() {
   let userGuess = Number(guessField.value);
